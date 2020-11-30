@@ -2,7 +2,7 @@ language: ruby
 services:
   - docker
 before_install:
-  - docker-compose build -t blog_app_web
+  - docker-compose build
   - docker-compose run web rake db:create
   - docker-compose run web rake db:migrate
   - gem install bundler -v 2.1.4
