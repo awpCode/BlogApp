@@ -5,6 +5,7 @@ before_install:
   - docker-compose build
   - docker-compose run web rake db:create
   - docker-compose run web rake db:migrate
+  - gem install bundler -v 2.1.4
 rvm:
 - 2.0.0
 - 1.9.3
