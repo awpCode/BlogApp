@@ -2,13 +2,13 @@ language: ruby
 services:
   - docker
 before_install:
-  - docker-compose build
+  - docker-compose build -t blog_app_web
   - docker-compose run web rake db:create
   - docker-compose run web rake db:migrate
   - gem install bundler -v 2.1.4
 rvm:
 - 2.5
-- jruby-19mode
 script:
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
- - docker push rishabhjaypee/blog_app_web
+ - docker tag blog_app_web $DOCKER_USERNAME/blog_app_web
+ - docker push $DOCKER_USERNAME/blog_app_web
