@@ -64,13 +64,32 @@ GEM
     crass (1.0.6)
     erubi (1.10.0)
     execjs (2.7.0)
+    faraday (1.1.0)
+      multipart-post (>= 1.2, < 3)
+      ruby2_keywords
+    faraday_middleware (1.0.0)
+      faraday (~> 1.0)
     ffi (1.13.1)
+    ffi (1.13.1-x64-mingw32)
+    gh (0.18.0)
+      activesupport (~> 5.0)
+      addressable (~> 2.4)
+      faraday (~> 1.0)
+      faraday_middleware (~> 1.0)
+      multi_json (~> 1.0)
+      net-http-persistent (~> 2.9)
+      net-http-pipeline
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    highline (2.0.3)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.1)
       activesupport (>= 5.0.0)
+    json (2.3.1)
+    json_pure (2.3.1)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -84,11 +103,20 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.2)
+    multi_json (1.15.0)
+    multipart-post (2.1.1)
+    net-http-persistent (2.9.4)
+    net-http-pipeline (1.0.1)
     nio4r (2.5.4)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
+    nokogiri (1.10.10-x64-mingw32)
+      mini_portile2 (~> 2.4.0)
     public_suffix (4.0.6)
     puma (3.12.6)
+    pusher-client (0.6.2)
+      json
+      websocket (~> 1.0)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -120,6 +148,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.8.2)
+    ruby2_keywords (0.0.2)
     ruby_dep (1.5.0)
     rubyzip (2.3.0)
     sass (3.7.4)
@@ -151,11 +180,21 @@ GEM
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    travis (1.10.0)
+      faraday (~> 1.0)
+      faraday_middleware (~> 1.0)
+      gh (~> 0.13)
+      highline (~> 2.0)
+      json_pure (~> 2.3)
+      launchy (~> 2.1, < 2.5.0)
+      pusher-client (~> 0.4)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
     tzinfo (1.2.8)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2020.4)
+      tzinfo (>= 1.0.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     web-console (3.7.0)
@@ -163,6 +202,7 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
+    websocket (1.2.8)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -171,6 +211,7 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   byebug
@@ -185,6 +226,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
+  travis
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
