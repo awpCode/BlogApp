@@ -3,7 +3,7 @@ RUN apt-get update -qq && apt-get install -y nodejs
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
 COPY Gemfile.lock /myapp/Gemfile.lock
-RUN gem install bundler -v 2.0.2
+RUN gem install bundler -v 2.1.4
 RUN bundle install
 COPY . /myapp
 
