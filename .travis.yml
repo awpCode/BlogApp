@@ -9,6 +9,6 @@ before_install:
 rvm:
 - 2.5
 script:
- - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
- - docker tag blog_app_web $DOCKER_USERNAME/blog_app_web
+ - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+ #- docker tag blog_app_web $DOCKER_USERNAME/blog_app_web
  - docker push $DOCKER_USERNAME/blog_app_web
