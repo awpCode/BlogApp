@@ -10,4 +10,5 @@ rvm:
 - 2.5
 script:
 - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-- docker push $DOCKER_USERNAME/blog_app_web
+- docker tag blog_app_web:travis $DOCKER_USERNAME/blog_app_web:travis
+- docker push $DOCKER_USERNAME/blog_app_web:travis
