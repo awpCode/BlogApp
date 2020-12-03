@@ -11,8 +11,8 @@ jobs:
   include:
   - stage: unit tests
     script:
-    - rails db:migrate RAILS_ENV=test
-    - rails test test/models/project_test.rb
+    - bundle exec rails db:migrate RAILS_ENV=test
+    - bundle exec rails test test/models/project_test.rb
   - stage: deploy to production
     deploy:
       provider: heroku
